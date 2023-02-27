@@ -42,6 +42,7 @@ let gameEngine = null;
 function startGame() {
   board = document.getElementById("snake");
   controls = document.getElementById("controls");
+  gameOverMsg = document.getElementById("game_over_msg");
   controls.style.display = "none";
   startBtn = document.getElementById("start");
   restartBtn = document.getElementById("restart");
@@ -109,6 +110,7 @@ function game() {
     if (snakeBody[i][0] == snakeX && snakeBody[i][1] == snakeY) {
       clearInterval(gameEngine);
       controls.style.display = "flex";
+      gameOverMsg.style.display = "block";
       startBtn.style.display = "none";
       restartBtn.style.display = "block";
       localStorage.setItem("highestVal", highestVal);

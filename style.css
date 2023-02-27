@@ -30,6 +30,10 @@ body {
   height: 100%;
   width: 100%;
 }
+#game_over_msg{
+  display: none;
+  margin-bottom: 10px;
+}
 #controls button {
   padding: 10px;
   color: #fff;
