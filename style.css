@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+body {
+  background: teal;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+
+#controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: rgba(0, 0, 0, 0.5); */
+  height: 100%;
+  width: 100%;
+}
+#controls button {
+  padding: 10px;
+  color: #fff;
+  background: rgb(96, 2, 211);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#restart {
+  display: none;
+}
+
+h1 {
+  display: block;
+  font-style: italic;
+  background: linear-gradient(hotpink, goldenrod);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+.score {
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+.score span {
+  color: #000;
+}
+.current_score {
+  margin-right: 10px;
+}
+
+.joystick {
+  margin-top: 50px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  display: none;
+}
+
+.joystick div {
+  width: 100%;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.lr {
+  display: flex;
+}
+
+#up-key:hover,
+#down-key:hover,
+#left-key:hover,
+#right-key:hover {
+  background: blue;
+}
+
+#up-key {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+#down-key {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#left-key {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#right-key {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mobile-controls {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.mobile-controls button {
+  display: flex;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 50%;
+  margin-right: 50px;
+  align-self: center;
+  font-size: 24px;
+  background: teal;
+  color: #213b88;
+}
+
+.mobile-controls button:hover {
+  background: #fe59eb;
+}
+
+@media screen and (max-width: 696px) {
+  .box {
+    text-align: center;
+  }
+
+  #snake {
+    height: 350px;
+    width: 350px;
+  }
+
+  .joystick {
+    display: flex;
+  }
+  .mobile-controls button {
+    display: flex;
+  }
+}
